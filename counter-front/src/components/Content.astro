@@ -1,0 +1,23 @@
+---
+import PointsHome from "../components/PointsHome.astro";
+import PointsGuest from "../components/PointsGuest.astro";
+import PlusMinusButtons from "../components/PlusMinusButtons.astro";
+
+import ContentLayout from "../layouts/ContentLayout.astro";
+import ScoresLayout from "../layouts/ScoresLayout.astro";
+
+// This component will read from a redis database and display the current score for each team.
+// It will pass the scores through props to the PointsHome and PointsGuest components.
+---
+
+<ContentLayout>
+    <ScoresLayout>
+        <PointsHome />
+        <PlusMinusButtons />
+    </ScoresLayout>
+
+    <ScoresLayout>
+        <PointsGuest />
+        <PlusMinusButtons />
+    </ScoresLayout>
+</ContentLayout>

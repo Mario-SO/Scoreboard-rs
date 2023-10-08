@@ -1,26 +1,18 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hedaer from "../components/Header.astro";
-import PointsHome from "../components/PointsHome.astro";
-import PointsGuest from "../components/PointsGuest.astro";
-import PlusMinusButtons from "../components/PlusMinusButtons.astro";
+import Header from "../components/Header.astro";
+import Content from "../components/Content.astro";
 import ResetButton from "../components/ResetButton.astro";
+
+import CardLayout from "../layouts/CardLayout.astro";
 ---
 
 <Layout title="Scoreboard">
-    <div class="text-white shadow-2xl shadow-black p-10 rounded-md">
-        <!-- Dark background color and white text -->
-        <Hedaer />
-        <div class="flex justify-between">
-            <div class="flex flex-col items-center">
-                <PointsHome />
-                <PlusMinusButtons />
-            </div>
-            <div class="flex flex-col items-center">
-                <PointsGuest />
-                <PlusMinusButtons />
-            </div>
-        </div>
+    <CardLayout>
+        <Header />
+
+        <Content />
+
         <ResetButton />
-    </div>
+    </CardLayout>
 </Layout>
