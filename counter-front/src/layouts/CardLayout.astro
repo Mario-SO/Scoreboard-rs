@@ -1,3 +1,14 @@
-<div class="text-white shadow-2xl shadow-black p-10 rounded-md">
+<!-- <div class="text-white shadow-2xl shadow-black p-10 rounded-md"> -->
+<div class="text-white box p-10">
     <slot />
 </div>
+
+<style>
+    .box {
+        border-radius: 6px;
+        background: #3c3f6d;
+        box-shadow:
+            inset -13px -13px 15px #18192c,
+            inset 13px 13px 15px #6065ae;
+    }
+</style>
